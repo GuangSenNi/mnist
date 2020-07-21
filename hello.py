@@ -8,7 +8,7 @@ EPOCHS = 20 # 总共训练批次
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # 下载训练集
 train_loader = torch.utils.data.DataLoader(
-    datasets.MNIST('data', train = True, download = True,
+    datasets.MNIST('data', train = True, download = False,
               transform = transforms.Compose([
                   transforms.ToTensor(),
                   transforms.Normalize((0.1037,), (0.3081,))
